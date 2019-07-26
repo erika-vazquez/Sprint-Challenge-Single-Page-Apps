@@ -38,18 +38,3 @@ header h1 {
   text-align: center;
 
 }
-.char-card{
-  border: 2px lightgray solid;
-  width: 400px;
-}
-.card-img{
-  width:400px;
-}
-.location-card{
-  border: 2px lightgray solid;
-  width: 400px;
-}
-.episode-card{
-  border: 2px lightgray solid;
-  width: 400px;
-}
