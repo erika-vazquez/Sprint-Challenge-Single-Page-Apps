@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
+import EpisodeCard from './EpisodeCard';
+import { Container } from 'semantic-ui-react';
 
 export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
@@ -16,18 +18,22 @@ const [episodes, setEpisodes] = useState([]);
   
   }, []);
 
-  return( <section className='character-list grid-view'>
-  {/*TODO: `array.map()` over your state here!{*/}
-  {episodes.map((episode, index)=>{
-    return (
-      <div className="episode-card">
-      <h2> {episode.name}</h2>
-      <h3> {episode.air_date}</h3>
-      <h3>Episode: {episode.episode}</h3>
-
-     </div>
-    )})
-  }
-    </section>
-  )
+  return (
+    <Container style={containerStyle}>
+        {episodes.map((episode, index)=>{
+            return <EpisodeCard name={episode.name}
+             episode={episode.episode}
+              airdate={episode.air_date} 
+              characters={episode.characters}/>
+        }
+    )}
+    </Container>
+)
 }
+
+const containerStyle = {
+display: "flex",
+flexWrap: "wrap",
+justifyContent: "space-around",
+alignItems: 'center',
+};

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
+import LocationCard from "./LocationCard";
+import { Grid, Container } from "semantic-ui-react";
 
 export default function LocationsList() {
   // TODO: Add useState to track data from useEffect
@@ -16,18 +18,25 @@ const [locations, setLocations] = useState([]);
   
   }, []);
 
-  return( <section className='character-list grid-view'>
-  {/*TODO: `array.map()` over your state here!{*/}
-  {locations.map((location, index)=>{
-    return (
-      <div className="location-card">
-      <h2> {location.name}</h2>
-      <h3> {location.type}</h3>
-      <h3>Residents: {location.residents.length}</h3>
-
-     </div>
-    )})
-  }
-    </section>
-  )
+  return (
+    <Container style={containerStyle}>
+      {locations.map((location, index) => {
+        return (
+          <LocationCard
+            name={location.name}
+            type={location.type}
+            dimension={location.dimension}
+            residents={location.residents}
+          />
+        );
+      })}
+    </Container>
+  );
 }
+
+const containerStyle = {
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "space-around",
+  alignItems: 'center',
+};
