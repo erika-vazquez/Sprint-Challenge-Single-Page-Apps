@@ -45,3 +45,7 @@ header h1 {
 .card-img{
   width:400px;
 }
+.location-card{
+  border: 2px lightgray solid;
+  width: 400px;
+}
