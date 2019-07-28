@@ -25,13 +25,16 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 - [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
+> Answer: The browser takes care of URL history. It allows us to build a single-page web application with navigation without the page refreshing as the user navigates. 
+
 - [ ] What does AJAX stand for?
-> Answer:
+> Answer: asynchronous JavaScript and XML. It's a set of web development techniques using many web technologies on the client side to create asynchronous web applications
+
 - [ ] What are `controlled components` in React?
-> Answer:
+> Answer:  It means every state mutation will have an associated handler function. This makes it straightforward to modify or validate user input.
+
 - [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+> Answer: GET, fetch, Axios
 
 
 ## Project Set Up
